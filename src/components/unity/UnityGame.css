@@ -1,0 +1,54 @@
+.unity-container {
+  @apply w-full max-w-4xl mx-auto bg-gray-900 rounded-lg overflow-hidden shadow-lg;
+}
+
+.unity-header {
+  @apply bg-gray-800 text-white p-4 text-center;
+}
+
+.unity-header h2 {
+  @apply m-0 text-2xl font-bold;
+}
+
+.unity-game {
+  @apply relative w-full;
+  height: 0;
+  padding-bottom: 62.5%; /* 16:10 aspect ratio */
+  @apply bg-gray-800;
+}
+
+.unity-game canvas {
+  @apply absolute top-0 left-0 w-full h-full;
+}
+
+.unity-loading-bar {
+  @apply absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4/5 max-w-md text-center;
+}
+
+.unity-progress-bar {
+  @apply w-full h-5 bg-gray-700 rounded-full overflow-hidden mb-2;
+}
+
+.unity-progress {
+  @apply h-full bg-gradient-to-r from-blue-500 to-blue-300;
+  width: 0%;
+  transition: width 0.2s ease;
+}
+
+.unity-progress-text {
+  @apply text-white text-sm;
+}
+
+.unity-footer {
+  @apply bg-gray-800 text-white p-4 flex justify-end;
+}
+
+.unity-fullscreen-button {
+  @apply bg-blue-600 text-white px-4 py-2 rounded cursor-pointer text-sm transition-colors duration-200 hover:bg-blue-700;
+}
+
+@media (max-width: 768px) {
+  .unity-game {
+    padding-bottom: 75%; /* Adjust aspect ratio for mobile */
+  }
+}
